@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico" />
+
+    <title>Rasa Test</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/sticky-footer.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Begin page content -->
+    <main role="main" class="container text-center">
+      <h1 class="mt-5">Rasa Test Bot</h1>
+      <hr />
+      <h3>What you can ask me</h2>
+      <ul class="list-group">
+        <li class="list-group-item">My name</li>
+        <li class="list-group-item">What I like to eat</li>
+      </ul>
+    </main>
+
+    <footer class="footer">
+      <div class="container text-center">
+        <span class="text-muted">Rasa &copy; 2020</span>
+      </div>
+    </footer>
+
+    <script>
+      WebChat.default.init({
+        selector: '#webchat',
+        initPayload: '/get_started',
+        customData: { language: 'en' }, // arbitrary custom data. Stay minimal as this will be added to the socket
+        socketUrl: 'https://as-rasa-heroku.herokuapp.com/',
+        socketPath: '/socket.io/',
+        title: 'A Bot',
+        subtitle: 'A Bot',
+        params: { storage: 'session' }, // can be set to "local"  or "session". details in storage section.
+      });
+    </script>
+  </body>
+</html>
